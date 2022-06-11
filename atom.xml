@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wusihai.github.io/</id>
+    <title>柚子茶色</title>
+    <updated>2022-06-11T10:35:09.207Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wusihai.github.io/"/>
+    <link rel="self" href="https://wusihai.github.io/atom.xml"/>
+    <subtitle>专于一事，必有所成。</subtitle>
+    <logo>https://wusihai.github.io/images/avatar.png</logo>
+    <icon>https://wusihai.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2022, 柚子茶色</rights>
+    <entry>
+        <title type="html"><![CDATA[Geophysics Open Souce]]></title>
+        <id>https://wusihai.github.io/post/geophysics-open-souce/</id>
+        <link href="https://wusihai.github.io/post/geophysics-open-souce/">
+        </link>
+        <updated>2022-06-11T01:35:52.000Z</updated>
+        <content type="html"><![CDATA[<ol>
+<li>弹性波模拟<br>
+(有限元方法)<br>
+https://github.com/martemyev</li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[VScode 插件markdownlint markdown规范提示]]></title>
+        <id>https://wusihai.github.io/post/vscode-cha-jian-markdownlint-markdown-gui-fan-ti-shi/</id>
+        <link href="https://wusihai.github.io/post/vscode-cha-jian-markdownlint-markdown-gui-fan-ti-shi/">
+        </link>
+        <updated>2022-06-11T01:16:12.000Z</updated>
+        <content type="html"><![CDATA[<p>MD004 - Unordered list style 整篇文档的无序列表的格式要一致<br>
+MD005 - Inconsistent indentation for list items at the same level<br>
+同一个等级的列表的缩进要一<br>
+MD006 - Consider starting bulleted lists at the beginning of the line<br>
+一级标题不能够缩进<br>
+MD007 - Unordered list indentation<br>
+无序列表嵌套的时候默认采取两个空格的缩进方式<br>
+MD009 - Trailing spaces<br>
+行尾最多可以添加两个空格，超出之后会有警告，最好每次都是两个空格因为两个空格刚好可以用来换行<br>
+MD010 - Hard tabs<br>
+不能使用tab来进行缩进，要使用空格<br>
+MD011 - Reversed link syntax<br>
+内联形式的链接和创建方式是否错误，中括号和圆括号是否使用正确<br>
+MD012 - Multiple consecutive blank lines<br>
+文档中不能有连续的空行（文档末可以有一个空行），在代码块中这个规则不会生效<br>
+MD013 - Line length<br>
+默认行的最大长度是80，对表格代码块标题都起效果<br>
+MD014 - Dollar signs used before commands without showing output<br>
+在代码块中，终端命令前面不需要有美元符号，如果如果代码块中既有终端命令，也有命令的输出，则终端命令前可以有美元符号($)<br>
+MD018 - No space after hash on atx style heading<br>
+标题格式如果是&quot;atx&quot;的话，#号和文字之间需要一个空格隔开<br>
+MD019 - Multiple spaces after hash on atx style heading<br>
+标题格式如果是&quot;atx&quot;的话，#号和文字之间只需要一个空格隔开，不需要多个<br>
+MD020 - No space inside hashes on closed atx style heading<br>
+在closed_atx格式的标题中，文字和前后的#号之间都需要一个空格隔开<br>
+MD021 - Multiple spaces inside hashes on closed atx style heading<br>
+在closed_atx格式的标题中，文字和前后的#号之间只需要一个空格隔开，不能有多余的<br>
+MD022 - Headings should be surrounded by blank lines<br>
+标题的上下行必须都是空格<br>
+MD023 - Headings must start at the beginning of the line<br>
+标题行不能缩进<br>
+MD024 - Multiple headings with the same content<br>
+在文档中不能有重复性的标题<br>
+MD025 - Multiple top level headings in the same document<br>
+同一个文档中，只能有一个最高级的标题，默认也只能有一个一级标题<br>
+MD026 - Trailing punctuation in heading<br>
+标题的末尾不能有&quot;. , ; : ! ? &quot;这些符号<br>
+MD027 - Multiple spaces after blockquote symbol<br>
+在创建引用块的时候，右尖号与文字之间必须有且只有一个空格<br>
+MD028 - Blank line inside blockquote<br>
+两个引用区块间不能仅用一个空行隔开或者同一引用区块中不能有空行，如果一行中没有内容，则这一行要用&gt;开头<br>
+MD029 - Ordered list item prefix<br>
+有序列表的前缀序号格式必须只用1或者从1开始的加1递增数字<br>
+MD030 - Spaces after list markers<br>
+列表（有序、无序）的前缀符号和文字之间用1个空格隔开，在列表嵌套或者同一列表项中有多个段落时，无序列表缩进两个空格，有序列表缩进3个空格<br>
+MD031 - Fenced code blocks should be surrounded by blank lines<br>
+单独的代码块前后需要用空行隔开（除非是在文档开头或末尾），否则有些解释器不会解释为代码块<br>
+MD032 - Lists should be surrounded by blank lines<br>
+列表（有序、无序）前后需要用空行隔开，否则有些解释器不会解释为列表，列表的缩进必须一致，否则会警告<br>
+MD033 - Inline HTML<br>
+文档中不允许使用html语句<br>
+MD034 - Bare URL used<br>
+单纯的链接地址需要用尖括号 (&lt;&gt;) 包裹，否则有些解释器不会解释为链接<br>
+MD035 - Horizontal rule style<br>
+创建水平线时整篇文档要统一，要和文档中第一次创建水平线使用的符号一致<br>
+MD036 - Emphasis used instead of a heading<br>
+不能用强调来代替标题 ****<br>
+MD037 - Spaces inside emphasis markers<br>
+强调的符号和文字之间不能有空格<br>
+MD038 - Spaces inside code span elements<br>
+当用单反引号创建代码段的时候，单反引号和它们之间的代码不能有空格，如果要把单反引号嵌入到代码段的首尾，创建代码段的单反引号和嵌入的单反引号间要有一个空格隔开<br>
+MD039 - Spaces inside link text<br>
+链接名和包围它的中括号之间不能有空格，但链接名中间可以有空格<br>
+MD040 - Fenced code blocks should have a language specified<br>
+单独的代码块（此处是指上下用三个反引号包围的代码块）应该指定代码块的编程语言，这一点有助于解释器对代码进行代码高亮<br>
+MD041 - First line in file should be a top level heading<br>
+文档的第一个非空行应该是文档最高级的标题，默认是1级标题<br>
+MD042 - No empty links<br>
+链接的地址不能为空<br>
+MD043 - Required heading structure<br>
+要求标题遵循一定的结构，默认是没有规定的结构<br>
+MD044 - Proper names should have the correct capitalization<br>
+指定一些名称，会检查它是否有正确的大写<br>
+MD045 - Images should have alternate text (alt text) ** 图片链接必须包含描述文本<br>
+MD046 - Code block style<br>
+整篇文档采用一致的代码格式<br>
+MD047 - Files should end with a single newline character<br>
+文档末尾需要一个空行结尾</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[常用工具]]></title>
+        <id>https://wusihai.github.io/post/chang-yong-gong-ju/</id>
+        <link href="https://wusihai.github.io/post/chang-yong-gong-ju/">
+        </link>
+        <updated>2022-06-11T01:13:49.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="文档转换pdf-转word">文档转换(pdf-转word)</h1>
+<p>https://www.ilovepdf.com/pdf_to_word</p>
+<p>https://www.pdf2go.com/</p>
+<h1 id="eps图片转换">EPS图片转换</h1>
+<p>https://cloudconvert.com/png-to-eps</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Notion与Zotero联动]]></title>
+        <id>https://wusihai.github.io/post/notion-yu-zotero-lian-dong/</id>
+        <link href="https://wusihai.github.io/post/notion-yu-zotero-lian-dong/">
+        </link>
+        <updated>2022-06-11T00:50:33.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>Notion负责文献数据的收集，整理<br>
+Zotero负责文献管理</p>
+</blockquote>
+<h1 id="1软件下载">1.软件下载：</h1>
+<p>软件官网下载： Zotero 和 Notion<br>
+Zotero：https://www.zotero.org/download/<br>
+Notion：https://www.notion.so/desktop</p>
+<h1 id="2notion设置">2.Notion设置</h1>
+<h2 id="1注册notion账户">1.注册notion账户。</h2>
+<h2 id="2设置integration用于自动连接zotero和notion">2.设置integration，用于自动连接zotero和notion。</h2>
+<p>进入设置页面：https://www.notion.so/my-integrations<br>
+创建 integration：<br>
+<img src="https://wusihai.github.io//post-images/1654908949217.jpeg" alt="" loading="lazy"><br>
+<img src="https://wusihai.github.io//post-images/1654908985570.jpeg" alt="" loading="lazy"></p>
+<h2 id="3-机器人生成后会生成一个密钥复制粘贴密钥">3. 机器人生成后，会生成一个密钥：复制粘贴密钥</h2>
+<figure data-type="image" tabindex="1"><img src="https://wusihai.github.io//post-images/1654909064666.jpeg" alt="" loading="lazy"></figure>
+<h2 id="4-在-notion-中创建文献数据库文献库模版点击-duplicate-即可复制">4. 在 Notion 中创建文献数据库：文献库模版（点击 Duplicate 即可复制）。</h2>
+<h2 id="5-将文献库和机器人连接">5. 将文献库和机器人连接：</h2>
+<figure data-type="image" tabindex="2"><img src="https://wusihai.github.io//post-images/1654909075101.jpeg" alt="" loading="lazy"></figure>
+<h2 id="6-从复制的文献库链接提取出数据库id">6. 从复制的文献库链接提取出数据库ID。</h2>
+<p>链接中的database_id 就是文献库的ID。<br>
+链接的格式如下：https://www.notion.so/{workspace_name}/{database_id}?v={view_id}</p>
+<h1 id="3zotero-设置">3.Zotero 设置</h1>
+<h2 id="1在浏览器中安装-zotero-connector并重启浏览器">1.在浏览器中安装 Zotero Connector，并重启浏览器。</h2>
+<h2 id="2打开zotero选择工具-插件-选择右上角的齿轮按钮选择导入插件">2.打开Zotero，选择工具 --&gt; 插件 --&gt; 选择右上角的齿轮按钮，选择导入插件。</h2>
+<figure data-type="image" tabindex="3"><img src="https://wusihai.github.io//post-images/1654909118190.jpeg" alt="" loading="lazy"></figure>
+<h2 id="3在-zotero中创建一个文件夹并命名我命名为了notero">3.在 Zotero中创建一个文件夹并命名，我命名为了“Notero”。</h2>
+<figure data-type="image" tabindex="4"><img src="https://wusihai.github.io//post-images/1654909224067.jpeg" alt="" loading="lazy"></figure>
+<h2 id="4将zotero和notion连接-选择工具-notero-preferences从上到下填入文件夹名机器人密钥和文献库id">4.将Zotero和Notion连接。选择工具 --&gt; Notero Preferences，从上到下填入：文件夹名，机器人密钥和文献库ID。</h2>
+<figure data-type="image" tabindex="5"><img src="https://wusihai.github.io//post-images/1654909263318.jpeg" alt="" loading="lazy"></figure>
+<p>设置完成后重启Zotero，Notero 就可以正常使用了。<br>
+至此之后，文献的管理变得不再繁琐。而且跨平台的文献同步让文献的相关文件，在不同平台间有迹可循。</p>
+<p>B站相关视频：https://www.bilibili.com/video/BV1e94y1f7Db?spm_id_from=333.337.search-card.all.click&amp;vd_source=e4bdf1623a3a59839a7b070c161674fc</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Zotero插件]]></title>
+        <id>https://wusihai.github.io/post/di-qiu-wu-li-xue/</id>
+        <link href="https://wusihai.github.io/post/di-qiu-wu-li-xue/">
+        </link>
+        <updated>2022-06-10T15:04:26.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="jasminum的pdftk">Jasminum的pdftk</h1>
+<blockquote>
+<p>添加学位论文书签依赖pdftk</p>
+</blockquote>
+<ol>
+<li>pdftk下载路径：https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/pdftk_server-2.02-mac_osx-10.11-setup.pkg</li>
+<li>jasminum路径选择：shift+command+G: 输入：/usr/local/bin，确认</li>
+</ol>
+<h1 id="better-bibtex插件">Better BibTex插件</h1>
+<ol>
+<li>若您使用Latex进行文献的写作，那么这个插件是非常重要的。该插件的主要功能是为每个文献以固定的样式生成其独一无二的 CiteKey ，这个 CiteKey 会在进行文献引用时用到。使用该插件，您就不用为自动生成的毫无规律的 CiteKey 而烦恼了。<br>
+下载地址：https://github.com/retorquere/zotero-better-bibtex/releases 如图 ：下载 .xpi 文件到您选定的文件夹中即可。</li>
+<li>选中要导出的文件分类的bib文件，</li>
+<li>在Zotero首选项-Better-Automatic export 设置，自动更新（on change)。</li>
+<li><img src="https://wusihai.github.io//post-images/1654911136748.png" alt="" loading="lazy"></li>
+</ol>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://wusihai.github.io/post/hello-gridea/</id>
+        <link href="https://wusihai.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="https://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>

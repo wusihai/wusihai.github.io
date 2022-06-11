@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>VScode 插件markdownlint markdown规范提示 | 柚子茶色</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wusihai.github.io//favicon.ico?v=1654943702446">
+<link rel="stylesheet" href="https://wusihai.github.io//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="MD004 - Unordered list style 整篇文档的无序列表的格式要一致
+MD005 - Inconsistent indentation for list items at the same level
+同一个等级的列表的..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wusihai.github.io/">
+        <img src="https://wusihai.github.io//images/avatar.png?v=1654943702446" class="site-logo">
+        <h1 class="site-title">柚子茶色</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            Home
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            About
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      专于一事，必有所成。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wusihai.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">VScode 插件markdownlint markdown规范提示</h2>
+            <div class="post-date">2022-06-11</div>
+            
+            <div class="post-content" v-pre>
+              <p>MD004 - Unordered list style 整篇文档的无序列表的格式要一致<br>
+MD005 - Inconsistent indentation for list items at the same level<br>
+同一个等级的列表的缩进要一<br>
+MD006 - Consider starting bulleted lists at the beginning of the line<br>
+一级标题不能够缩进<br>
+MD007 - Unordered list indentation<br>
+无序列表嵌套的时候默认采取两个空格的缩进方式<br>
+MD009 - Trailing spaces<br>
+行尾最多可以添加两个空格，超出之后会有警告，最好每次都是两个空格因为两个空格刚好可以用来换行<br>
+MD010 - Hard tabs<br>
+不能使用tab来进行缩进，要使用空格<br>
+MD011 - Reversed link syntax<br>
+内联形式的链接和创建方式是否错误，中括号和圆括号是否使用正确<br>
+MD012 - Multiple consecutive blank lines<br>
+文档中不能有连续的空行（文档末可以有一个空行），在代码块中这个规则不会生效<br>
+MD013 - Line length<br>
+默认行的最大长度是80，对表格代码块标题都起效果<br>
+MD014 - Dollar signs used before commands without showing output<br>
+在代码块中，终端命令前面不需要有美元符号，如果如果代码块中既有终端命令，也有命令的输出，则终端命令前可以有美元符号($)<br>
+MD018 - No space after hash on atx style heading<br>
+标题格式如果是&quot;atx&quot;的话，#号和文字之间需要一个空格隔开<br>
+MD019 - Multiple spaces after hash on atx style heading<br>
+标题格式如果是&quot;atx&quot;的话，#号和文字之间只需要一个空格隔开，不需要多个<br>
+MD020 - No space inside hashes on closed atx style heading<br>
+在closed_atx格式的标题中，文字和前后的#号之间都需要一个空格隔开<br>
+MD021 - Multiple spaces inside hashes on closed atx style heading<br>
+在closed_atx格式的标题中，文字和前后的#号之间只需要一个空格隔开，不能有多余的<br>
+MD022 - Headings should be surrounded by blank lines<br>
+标题的上下行必须都是空格<br>
+MD023 - Headings must start at the beginning of the line<br>
+标题行不能缩进<br>
+MD024 - Multiple headings with the same content<br>
+在文档中不能有重复性的标题<br>
+MD025 - Multiple top level headings in the same document<br>
+同一个文档中，只能有一个最高级的标题，默认也只能有一个一级标题<br>
+MD026 - Trailing punctuation in heading<br>
+标题的末尾不能有&quot;. , ; : ! ? &quot;这些符号<br>
+MD027 - Multiple spaces after blockquote symbol<br>
+在创建引用块的时候，右尖号与文字之间必须有且只有一个空格<br>
+MD028 - Blank line inside blockquote<br>
+两个引用区块间不能仅用一个空行隔开或者同一引用区块中不能有空行，如果一行中没有内容，则这一行要用&gt;开头<br>
+MD029 - Ordered list item prefix<br>
+有序列表的前缀序号格式必须只用1或者从1开始的加1递增数字<br>
+MD030 - Spaces after list markers<br>
+列表（有序、无序）的前缀符号和文字之间用1个空格隔开，在列表嵌套或者同一列表项中有多个段落时，无序列表缩进两个空格，有序列表缩进3个空格<br>
+MD031 - Fenced code blocks should be surrounded by blank lines<br>
+单独的代码块前后需要用空行隔开（除非是在文档开头或末尾），否则有些解释器不会解释为代码块<br>
+MD032 - Lists should be surrounded by blank lines<br>
+列表（有序、无序）前后需要用空行隔开，否则有些解释器不会解释为列表，列表的缩进必须一致，否则会警告<br>
+MD033 - Inline HTML<br>
+文档中不允许使用html语句<br>
+MD034 - Bare URL used<br>
+单纯的链接地址需要用尖括号 (&lt;&gt;) 包裹，否则有些解释器不会解释为链接<br>
+MD035 - Horizontal rule style<br>
+创建水平线时整篇文档要统一，要和文档中第一次创建水平线使用的符号一致<br>
+MD036 - Emphasis used instead of a heading<br>
+不能用强调来代替标题 ****<br>
+MD037 - Spaces inside emphasis markers<br>
+强调的符号和文字之间不能有空格<br>
+MD038 - Spaces inside code span elements<br>
+当用单反引号创建代码段的时候，单反引号和它们之间的代码不能有空格，如果要把单反引号嵌入到代码段的首尾，创建代码段的单反引号和嵌入的单反引号间要有一个空格隔开<br>
+MD039 - Spaces inside link text<br>
+链接名和包围它的中括号之间不能有空格，但链接名中间可以有空格<br>
+MD040 - Fenced code blocks should have a language specified<br>
+单独的代码块（此处是指上下用三个反引号包围的代码块）应该指定代码块的编程语言，这一点有助于解释器对代码进行代码高亮<br>
+MD041 - First line in file should be a top level heading<br>
+文档的第一个非空行应该是文档最高级的标题，默认是1级标题<br>
+MD042 - No empty links<br>
+链接的地址不能为空<br>
+MD043 - Required heading structure<br>
+要求标题遵循一定的结构，默认是没有规定的结构<br>
+MD044 - Proper names should have the correct capitalization<br>
+指定一些名称，会检查它是否有正确的大写<br>
+MD045 - Images should have alternate text (alt text) ** 图片链接必须包含描述文本<br>
+MD046 - Code block style<br>
+整篇文档采用一致的代码格式<br>
+MD047 - Files should end with a single newline character<br>
+文档末尾需要一个空行结尾</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wusihai.github.io/post/chang-yong-gong-ju/">
+                  <h3 class="post-title">
+                    常用工具
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

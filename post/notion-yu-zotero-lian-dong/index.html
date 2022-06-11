@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>Notion与Zotero联动 | 柚子茶色</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://wusihai.github.io//favicon.ico?v=1654943702446">
+<link rel="stylesheet" href="https://wusihai.github.io//styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="
+Notion负责文献数据的收集，整理
+Zotero负责文献管理
+
+1.软件下载：
+软件官网下载： Zotero 和 Notion
+Zotero：https://www.zotero.org/download/
+Notion：https:/..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://wusihai.github.io/">
+        <img src="https://wusihai.github.io//images/avatar.png?v=1654943702446" class="site-logo">
+        <h1 class="site-title">柚子茶色</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="/" class="site-nav">
+            Home
+          </a>
+        
+      
+        
+          <a href="/archives" class="site-nav">
+            Archives
+          </a>
+        
+      
+        
+          <a href="/tags" class="site-nav">
+            Tags
+          </a>
+        
+      
+        
+          <a href="/post/about" class="site-nav">
+            About
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      专于一事，必有所成。
+    </div>
+    <div class="site-footer">
+      Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | <a class="rss" href="https://wusihai.github.io//atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">Notion与Zotero联动</h2>
+            <div class="post-date">2022-06-11</div>
+            
+            <div class="post-content" v-pre>
+              <blockquote>
+<p>Notion负责文献数据的收集，整理<br>
+Zotero负责文献管理</p>
+</blockquote>
+<h1 id="1软件下载">1.软件下载：</h1>
+<p>软件官网下载： Zotero 和 Notion<br>
+Zotero：https://www.zotero.org/download/<br>
+Notion：https://www.notion.so/desktop</p>
+<h1 id="2notion设置">2.Notion设置</h1>
+<h2 id="1注册notion账户">1.注册notion账户。</h2>
+<h2 id="2设置integration用于自动连接zotero和notion">2.设置integration，用于自动连接zotero和notion。</h2>
+<p>进入设置页面：https://www.notion.so/my-integrations<br>
+创建 integration：<br>
+<img src="https://wusihai.github.io//post-images/1654908949217.jpeg" alt="" loading="lazy"><br>
+<img src="https://wusihai.github.io//post-images/1654908985570.jpeg" alt="" loading="lazy"></p>
+<h2 id="3-机器人生成后会生成一个密钥复制粘贴密钥">3. 机器人生成后，会生成一个密钥：复制粘贴密钥</h2>
+<figure data-type="image" tabindex="1"><img src="https://wusihai.github.io//post-images/1654909064666.jpeg" alt="" loading="lazy"></figure>
+<h2 id="4-在-notion-中创建文献数据库文献库模版点击-duplicate-即可复制">4. 在 Notion 中创建文献数据库：文献库模版（点击 Duplicate 即可复制）。</h2>
+<h2 id="5-将文献库和机器人连接">5. 将文献库和机器人连接：</h2>
+<figure data-type="image" tabindex="2"><img src="https://wusihai.github.io//post-images/1654909075101.jpeg" alt="" loading="lazy"></figure>
+<h2 id="6-从复制的文献库链接提取出数据库id">6. 从复制的文献库链接提取出数据库ID。</h2>
+<p>链接中的database_id 就是文献库的ID。<br>
+链接的格式如下：https://www.notion.so/{workspace_name}/{database_id}?v={view_id}</p>
+<h1 id="3zotero-设置">3.Zotero 设置</h1>
+<h2 id="1在浏览器中安装-zotero-connector并重启浏览器">1.在浏览器中安装 Zotero Connector，并重启浏览器。</h2>
+<h2 id="2打开zotero选择工具-插件-选择右上角的齿轮按钮选择导入插件">2.打开Zotero，选择工具 --&gt; 插件 --&gt; 选择右上角的齿轮按钮，选择导入插件。</h2>
+<figure data-type="image" tabindex="3"><img src="https://wusihai.github.io//post-images/1654909118190.jpeg" alt="" loading="lazy"></figure>
+<h2 id="3在-zotero中创建一个文件夹并命名我命名为了notero">3.在 Zotero中创建一个文件夹并命名，我命名为了“Notero”。</h2>
+<figure data-type="image" tabindex="4"><img src="https://wusihai.github.io//post-images/1654909224067.jpeg" alt="" loading="lazy"></figure>
+<h2 id="4将zotero和notion连接-选择工具-notero-preferences从上到下填入文件夹名机器人密钥和文献库id">4.将Zotero和Notion连接。选择工具 --&gt; Notero Preferences，从上到下填入：文件夹名，机器人密钥和文献库ID。</h2>
+<figure data-type="image" tabindex="5"><img src="https://wusihai.github.io//post-images/1654909263318.jpeg" alt="" loading="lazy"></figure>
+<p>设置完成后重启Zotero，Notero 就可以正常使用了。<br>
+至此之后，文献的管理变得不再繁琐。而且跨平台的文献同步让文献的相关文件，在不同平台间有迹可循。</p>
+<p>B站相关视频：https://www.bilibili.com/video/BV1e94y1f7Db?spm_id_from=333.337.search-card.all.click&amp;vd_source=e4bdf1623a3a59839a7b070c161674fc</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://wusihai.github.io/post/di-qiu-wu-li-xue/">
+                  <h3 class="post-title">
+                    Zotero插件
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
