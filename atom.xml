@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://wusihai.github.io/</id>
+    <title>Gridea</title>
+    <updated>2023-07-23T11:47:32.343Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://wusihai.github.io/"/>
+    <link rel="self" href="https://wusihai.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>https://wusihai.github.io/images/avatar.png</logo>
+    <icon>https://wusihai.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2023, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[测试文稿]]></title>
+        <id>https://wusihai.github.io/post/ce-shi-wen-gao/</id>
+        <link href="https://wusihai.github.io/post/ce-shi-wen-gao/">
+        </link>
+        <updated>2023-07-23T11:44:37.000Z</updated>
+        <content type="html"><![CDATA[<p>新的测试文件</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[引言结构]]></title>
+        <id>https://wusihai.github.io/post/yin-yan-jie-gou/</id>
+        <link href="https://wusihai.github.io/post/yin-yan-jie-gou/">
+        </link>
+        <updated>2022-08-22T07:48:14.000Z</updated>
+        <content type="html"><![CDATA[<p>% 研究的问题/领域是什么？（研究范围）</p>
+<p>% 为什么重要？</p>
+<p>% 目前的主要研究或发现的成果？</p>
+<p>% 尚未解决的问题？或已有问题没有被科学解释清楚？</p>
+<p>% 你的研究目标和方法？（将提供什么新方法/数据/模型/理论去解决问题？</p>
+<p>% 回答了以上五个问题，引言的写作思维结构就清楚了。<br>
+% 写作时，按回答上述五个问题的逻辑顺序，从研究问题的全局出发，逐步缩小范围到局部一点上进行阐述，<br>
+% 做到“由大到小，由粗到细”，有逻辑地引导审稿人/读者往下阅读，直到引言最后一段，<br>
+% 呈现出论文研究的目标、方法和意义，是一个像封面图中“漏斗”的写作模式。</p>
+<p>% 在引言的最后一段，清楚地写明研究目的，简明扼要地讲清楚研究方法，但是不要写结果和结论，<br>
+% 这两部分需要写在后面的section中，让全文写作有逻辑、有深入、不重复；（笔者也发现少数论文会简略写上研究结果和结论，但笔者不建议这种写法）</p>
+<p>% 不能过分夸大研究问题的重要性，用坚实的数据或实际观察去支持提出的观点；</p>
+<p>% 引言不是文献综述。一切引用分析的论文都是为了引出你要分析和解决的问题，让审稿人/读者觉得你要解决的问题是有根有据；</p>
+<p>% 引全最相关、原创和重要的研究成果（原创性论文或者最新的综述），养成跟踪研究进展的习惯</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[optimlib ]]></title>
+        <id>https://wusihai.github.io/post/optimlib/</id>
+        <link href="https://wusihai.github.io/post/optimlib/">
+        </link>
+        <updated>2022-08-21T11:01:59.000Z</updated>
+        <content type="html"><![CDATA[<h1 id="一-安装">一、安装</h1>
+<h2 id="1-在头文件前添加选项">1. 在头文件前添加选项：</h2>
+<p>开启omp +支持 armadillo:<br>
+如：<br>
+#define OPTIM_USE_OPENMP<br>
+#define OPTIM_ENABLE_EIGEN_WRAPPERS<br>
+#include &quot;optim.hpp&quot;</p>
+<h2 id=""></h2>
+<h2 id="2安装使用头文件方式">2.安装使用头文件方式</h2>
+<p>./configure --header-only-version -i &quot;/usr/local&quot; -l arma -p<br>
+make &amp;&amp; make install</p>
+<h1 id="二-测试及示例">二、测试及示例</h1>
+<h2 id="1-api">1. API</h2>
+<p>algorithm_id(&lt;initial/final values&gt;, &lt;objective function&gt;, &lt;objectivefunction data&gt;);</p>
+<ul>
+<li>A writable vector of initial values to define the starting point of the algorithm, where, in the event of successful<br>
+completion of the algorithm, the initial values will be overwritten by the latest candidate solution vector.</li>
+<li>The objective function is a user-defined function to be minimized, or zeroed-out in the case of root<br>
+finding methods.</li>
+<li>The final input is optional; it is any object that contains additional parameters necessary to evaluate the objective<br>
+function.<br>
+例如：BFGS<br>
+bfgs(ColVec_t&amp; init_out_vals, std::function&lt;double (const ColVec_t&amp; vals_inp, ColVec_t* grad_out, void* opt_data)&gt; opt_objfn, void* opt_data);</li>
+</ul>
+<h2 id="2优化算法设置">2.优化算法设置</h2>
+<p>An object of type <strong>algo_settings_t</strong> can be used to control the behavior of the optimization routines. Each algorithm page details the relevant parameters for that methods, but we list the full settings here for completeness.</p>
+<h1 id="三-各类优化算法详细">三、各类优化算法详细</h1>
+<h2 id="1自动差分">1.自动差分</h2>
+<h2 id="2convex-optimization">2.Convex optimization</h2>
+<h3 id="21-bfgs">2.1 BFGS</h3>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>https://wusihai.github.io/post/hello-gridea/</id>
+        <link href="https://wusihai.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>

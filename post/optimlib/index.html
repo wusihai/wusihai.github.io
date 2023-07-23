@@ -1,0 +1,225 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>optimlib  | Gridea</title>
+<link rel="shortcut icon" href="https://wusihai.github.io//favicon.ico?v=1690112846572">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="https://wusihai.github.io//styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="optimlib  | Gridea - Atom Feed" href="https://wusihai.github.io//atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="一、安装
+1. 在头文件前添加选项：
+开启omp +支持 armadillo:
+如：
+#define OPTIM_USE_OPENMP
+#define OPTIM_ENABLE_EIGEN_WRAPPERS
+#include &quot;o..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://wusihai.github.io/">
+  <img class="avatar" src="https://wusihai.github.io//images/avatar.png?v=1690112846572" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              optimlib 
+            </h2>
+            <div class="post-info">
+              <span>
+                2022-08-21
+              </span>
+              <span>
+                2 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <h1 id="一-安装">一、安装</h1>
+<h2 id="1-在头文件前添加选项">1. 在头文件前添加选项：</h2>
+<p>开启omp +支持 armadillo:<br>
+如：<br>
+#define OPTIM_USE_OPENMP<br>
+#define OPTIM_ENABLE_EIGEN_WRAPPERS<br>
+#include &quot;optim.hpp&quot;</p>
+<h2 id=""></h2>
+<h2 id="2安装使用头文件方式">2.安装使用头文件方式</h2>
+<p>./configure --header-only-version -i &quot;/usr/local&quot; -l arma -p<br>
+make &amp;&amp; make install</p>
+<h1 id="二-测试及示例">二、测试及示例</h1>
+<h2 id="1-api">1. API</h2>
+<p>algorithm_id(&lt;initial/final values&gt;, &lt;objective function&gt;, &lt;objectivefunction data&gt;);</p>
+<ul>
+<li>A writable vector of initial values to define the starting point of the algorithm, where, in the event of successful<br>
+completion of the algorithm, the initial values will be overwritten by the latest candidate solution vector.</li>
+<li>The objective function is a user-defined function to be minimized, or zeroed-out in the case of root<br>
+finding methods.</li>
+<li>The final input is optional; it is any object that contains additional parameters necessary to evaluate the objective<br>
+function.<br>
+例如：BFGS<br>
+bfgs(ColVec_t&amp; init_out_vals, std::function&lt;double (const ColVec_t&amp; vals_inp, ColVec_t* grad_out, void* opt_data)&gt; opt_objfn, void* opt_data);</li>
+</ul>
+<h2 id="2优化算法设置">2.优化算法设置</h2>
+<p>An object of type <strong>algo_settings_t</strong> can be used to control the behavior of the optimization routines. Each algorithm page details the relevant parameters for that methods, but we list the full settings here for completeness.</p>
+<h1 id="三-各类优化算法详细">三、各类优化算法详细</h1>
+<h2 id="1自动差分">1.自动差分</h2>
+<h2 id="2convex-optimization">2.Convex optimization</h2>
+<h3 id="21-bfgs">2.1 BFGS</h3>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li><a href="#%E4%B8%80-%E5%AE%89%E8%A3%85">一、安装</a>
+<ul>
+<li><a href="#1-%E5%9C%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E5%89%8D%E6%B7%BB%E5%8A%A0%E9%80%89%E9%A1%B9">1. 在头文件前添加选项：</a></li>
+<li></li>
+<li><a href="#2%E5%AE%89%E8%A3%85%E4%BD%BF%E7%94%A8%E5%A4%B4%E6%96%87%E4%BB%B6%E6%96%B9%E5%BC%8F">2.安装使用头文件方式</a></li>
+</ul>
+</li>
+<li><a href="#%E4%BA%8C-%E6%B5%8B%E8%AF%95%E5%8F%8A%E7%A4%BA%E4%BE%8B">二、测试及示例</a>
+<ul>
+<li><a href="#1-api">1. API</a></li>
+<li><a href="#2%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AE%BE%E7%BD%AE">2.优化算法设置</a></li>
+</ul>
+</li>
+<li><a href="#%E4%B8%89-%E5%90%84%E7%B1%BB%E4%BC%98%E5%8C%96%E7%AE%97%E6%B3%95%E8%AF%A6%E7%BB%86">三、各类优化算法详细</a>
+<ul>
+<li><a href="#1%E8%87%AA%E5%8A%A8%E5%B7%AE%E5%88%86">1.自动差分</a></li>
+<li><a href="#2convex-optimization">2.Convex optimization</a>
+<ul>
+<li><a href="#21-bfgs">2.1 BFGS</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://wusihai.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="https://wusihai.github.io//atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>
